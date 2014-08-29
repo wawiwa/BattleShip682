@@ -5,7 +5,9 @@
 <struts>
 	<package name="default" extends="struts-default">
 		
-
+		<action name="login" class="actions.Driver" method="gotoDashboard">
+			<result name="success">dashboard.html</result>
+		</action>
 
 	</package>
 </struts>
