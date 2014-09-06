@@ -20,6 +20,14 @@ $(document).ready(function() {
     //on document load, set the body background to retina-wood.
     $('body').removeClass().addClass("retina-wood");
 
+
+    $(".playButtonAction").click(function(e){
+        console.log("Play button was pressed");
+        console.log(e);
+
+    });
+
+
 });
 </script>
 
@@ -46,20 +54,47 @@ $(document).ready(function() {
 	<div class="container-fluid">
 
 	<div class="content">
+
+        <style>
+
+            #UserGameStats div.span4.stats {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                color: #3a87ad;
+                background-color: #d9edf7;
+                border-color: #bce8f1;
+                border-radius: 4px;
+                border: 2px solid #72ACF5;
+            }
+
+        </style>
 		
-			<div class="row-fluid">
+			<div class="row-fluid" id="UserGameStats">
 				<div class="span12">
 					<div class="box">
 						<div class="box-head">
 							<h3>User Game Stats</h3>
-							
 						</div>
-						<div class="box-content">
-							<h3>Game Stats will go here</h3>
-                            <p>Won</p>
-                            <p>Lost</p>
-                            <p>Draw</p>
+                        <br/>
+                        <div class="box-content">
+
+                            <div class="span4 stats">
+                                <h3 class="text-center" style="text-align: center">Wins:
+                                    <span style="color: blue;"> 20</span>
+                                </h3>
+                            </div>
+                            <div class="span4 stats">
+                                <h3 class="text-center" style="text-align: center">Losses:
+                                    <span style="color: blue;"> 20</span>
+                                </h3>
+                            </div>
+                            <div class="span4 stats">
+                                <h3 class="text-center" style="text-align: center">Draws:
+                                    <span style="color: blue;"> 20</span>
+                                </h3>
+                            </div>
 						</div>
+                        <br/>
 					</div>
 				</div>
 			</div>
@@ -115,7 +150,7 @@ $(document).ready(function() {
                                             <span class="label label-success">Online</span>
 										</td>
                                         <td>
-                                            <button class="btn">Play</button>
+                                            <button class="btn playButtonAction">Play</button>
                                         </td>
 									</tr>
 
